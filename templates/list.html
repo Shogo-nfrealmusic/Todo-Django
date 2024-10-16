@@ -1,5 +1,23 @@
 {% extends "base.html" %}
 
 {% block header %}
-this is list
+<div class="jumbotron jumbotron-fluid">
+    <div class="container">
+      <h1 class="display-4">Todo List</h1>
+      <p class="lead">Improve your daily productivity and enrich your life.</p>
+    </div>
+</div>
 {% endblock %}
+
+{% block content %}
+<div class="container">
+    {% for item in object_list %}
+    <div class="alert alert-success" role="alert">
+        <p>{{ item.title }}</p>
+        <a href="#" class="btn btn-primary" role="button" aria-disabled="true">Edit</a>
+        <a href="#" class="btn btn-danger" role="button" aria-disabled="true">Delete</a>
+        <a href="#" class="btn btn-dark" role="button" aria-disabled="true">Detail</a>
+    </div>
+    {% endfor %}
+</div>
+{% endblock content%}
