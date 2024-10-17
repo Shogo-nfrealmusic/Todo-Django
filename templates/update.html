@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container mt-4">
+    <h2>Update Todo</h2>
+    <form action="" method="POST">
+        {% csrf_token %}
+        
+        <div class="mb-3">
+            <label for="id_title" class="form-label">Title</label>
+            {{ form.title }}
+        </div>
+        
+        <div class="mb-3">
+            <label for="id_memo" class="form-label">Memo</label>
+            {{ form.memo }}
+        </div>
+
+        <div class="mb-3">
+            <label for="id_priority" class="form-label">Priority</label>
+            {{ form.priority }}
+        </div>
+        
+        <div class="mb-3">
+            <label for="id_duedate" class="form-label">Due Date</label>
+            {{ form.duedate }}
+        </div>
+
+        <button type="submit" class="btn btn-primary">Update</button>
+    </form>
+</div>
+{% endblock content %}

@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container d-flex justify-content-center align-items-center vh-100">
+    <form action="" method="POST" class="text-center">
+        {% csrf_token %}
+        <button type="submit" class="btn btn-danger btn-lg">Delete</button>
+    </form>
+</div>
+{% endblock content %}

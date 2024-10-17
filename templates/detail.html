@@ -2,16 +2,19 @@
 
 {% block header %}
 <div class="alert alert-dark" role="alert">
-    detail
-  </div>
+    Todo Details
+</div>
 {% endblock %}
 
 {% block content %}
-<div class="alert alert-success" role="alert">
-    {{ object.title }}
-  </div>
-<div class="alert alert-success" role="alert">
-    {{ object.memo }}
-  </div>
-
-{% endblock content%}
+<div class="container mt-4">
+    <div class="card">
+        <div class="card-header bg-primary text-white">
+            <h3 class="card-title">{{ object.title }}</h3>
+        </div>
+        <div class="card-body">
+            <p class="card-text">{{ object.memo }}</p>
+        </div>
+    </div>
+</div>
+{% endblock content %}
